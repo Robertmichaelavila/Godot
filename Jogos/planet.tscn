@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxioyer5tsrvf"]
+
+[ext_resource type="Script" path="res://planet.gd" id="1_r86ik"]
+[ext_resource type="Texture2D" uid="uid://clqg6uwr0sdju" path="res://sarabot-alpha.png" id="2_ge0m0"]
+
+[node name="Planet" type="Node2D"]
+script = ExtResource("1_r86ik")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 435.0
+offset_bottom = 61.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(395, 257.285)
+texture = ExtResource("2_ge0m0")
+hframes = 8
+vframes = 6
+
+[connection signal="text_changed" from="TextEdit" to="." method="_on_text_edit_text_changed"]
